@@ -35,12 +35,12 @@ header{
     padding-top: 5vh;
     text-align: center;
     color: #474747;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
 
 #a{
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
     font-size: 3vh;
 }
 
@@ -49,21 +49,57 @@ header{
     background: #f7f7f7;
     margin: auto;
     width: 50vw;
-    height: 50vh;
+    height: 60vh;
     display: flex;
     align-items: center
 }
 
 #info{
     text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
     font-size: 3vh;
     padding-left: 7vh;
-    text-align: left;
 }
 
 #im{
     height: 40vh;
     margin: auto;
+}
+
+.sidebar{
+    width:100%;
+}
+
+.but{
+    text-align:center;
+}
+
+#img1 {
+    background:url(https://i.imgur.com/OCwOpWh.png) no-repeat;
+    background-size: cover;
+    height: 32vw;
+    width: 24vw;
+    border: none;
+    cursor: pointer;
+}
+
+#img2 {
+    background:url(https://i.imgur.com/IiH55pk.png) no-repeat;
+    background-size: cover;
+    height: 32vw;
+    width: 24vw;
+    border: none;
+    cursor: pointer;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+#img3 {
+    background:url(https://i.imgur.com/WGTKZDN.png) no-repeat;
+    background-size: cover;
+    height: 32vw;
+    width: 24vw;
+    border: none;
+    cursor: pointer;
 }
 
