@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>duy1502</title>
-    <link href="main.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
   </head>
   
   <body>
@@ -12,7 +12,6 @@
         BronyaFeetLicker
       </div>
     </header>
-    <script src="stuff.js"></script>
 
     <div class = "vertical"></div>
 
@@ -34,16 +33,26 @@
           <br>Nguyễn Bùi Hoàng Duy</b>
         </p>
         <p>
-          <b>Date of Birth</b>
+          <b>Date of birth</b>
           <br>15/02/2005</b>
         </p>
         <p>
           <b>Hometown</b>
           <br>Hanoi, Vietnam</b>
         </p>
+      </div>
+      <div id="info">
         <p>
           <b>Country of residence</b>
           <br>Vietnam</b>
+        </p>
+        <p>
+          <b>Phone number</b>
+          <br>+84845594988</b>
+        </p>
+        <p>
+          <b>E-mail</b>
+          <br>duy.ngbh@gmail.com</b>
         </p>
       </div>
       <img src="https://i.imgur.com/Al0M2Qt.jpg" id="im">
@@ -54,23 +63,80 @@
     <h1 class="h"><b>Educational Background</b></h1>
     <div class="sidebar">
       <div class="but">
-        <button id="img1"></button>
-        <button id="img2"></button>
-        <button id="img3"></button>
+
+        <button id="btn1" onclick="pop1()"></button>
+        <div id="myModal1" class="modal">
+          <div class="modal-content">
+            <div class="school-head"><b>Giang Vo</b></div>
+            <div class="school-des">(2016 - 2020)</div>
+            <p class="school-des">Had a wonderful time during my secondary school years at Giang Vo.</p>
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNQeETsNjBzbWTTEqV_qH3oEjr7qA9GXVlbgQsv=s1360-w1360-h1020" class="school-img">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMFK2NFwSD38RTDgHJiFktKTPyLIEvBHL1tUGn9=s1360-w1360-h1020" class="school-img">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMMvkgSBA0HfrZBEDvMseHPLZbmSESpDRUwOaTr=s1360-w1360-h1020" class="school-img">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMhsKv24gt0BLpQd1ibNz_Mh9jVqJgwwpavb5ZY=s1360-w1360-h1020" class="school-img">
+          </div>
+        </div>
+
+        <button id="btn2" onclick="pop2()"></button>
+        <div id="myModal2" class="modal">
+          <div class="modal-content">
+            <div class="school-head"><b>Hanoi - Amsterdam High School for the Gifted</b></div>
+            <div class="school-des">(2020 - 2023)</div>
+            <p class="school-des">Widely regarded as one of the best, if not the best, high schools in Hanoi, and even in Vietnam.</p>
+            <p class="school-des">For me, it is truly my second home.</p>
+            <img src="https://i.imgur.com/kqy0upV.jpg" class="school-img">
+            <img src="https://i.imgur.com/9IylpqI.jpg" class="school-img">
+            <img src="https://i.imgur.com/TKc1dTi.jpg" class="school-img">
+            <img src="https://i.imgur.com/SJKrr5F.jpg" class="school-img">
+          </div>
+        </div>
+
+        <button id="btn3" onclick="pop3()"></button>
+        <div id="myModal3" class="modal">
+          <div class="modal-content">
+            <div class="school-head"><b>Maastricht University</b></dv>
+            <div class="school-des">(2024 - unknown)</div>
+            <p class="school-des">
+              Accepted to Maastricht University and currently taking a gap year. 
+            </p>
+            <p class="school-des">
+              If I'm not accepted to any of the colleges on my wishlist (University of Amsterdam, Utrecht University, Twente University) within the next year, I will be starting my studies at Maastricht University in Autumn 2024.</p>
+            </p>
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMZQm740ORLo8veV16-t7z9sgrI3CtTUhRFUY9h=s1360-w1360-h1020" class="school-img">
+            <img src="https://www.maastrichtuniversity.nl/sites/default/files/styles/3000x1050/public/2023-03/um-tapijn-202010-005_2.jpg?itok=9KjjQ_DG" class="school-img">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipO4hzN87WoTL6J5s-8LTmz5GySGR602LEfdXH_z=s1360-w1360-h1020" class="school-img">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMhakj4f43FU9MEeOoTfmMHggyZLSs9TU1NJPld=s1360-w1360-h1020" class="school-img">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipM1zgW8Eu1G7l_Yd02eWBVZftwJyspDJGlePhM=s1360-w1360-h1020" class="school-img">
+          </div>
+        </div>
+        
       </div>
     </div>
 
     <div class = "vertical"></div>
 
-    <h1 class="h"><b>Some hobbies</b></h1>
-    <ul>
-      <li>Piano & Violin</li>
-      <li>Baseball</li>
-      <li>Video Games</li>
-    </ul>
+    <h1 class="h"><b>Hobbies</b></h1>
+    <div class="sidebar">
+      <div class="but">
+        <div id="ho1" class="ho">
+          <img src="" class="himg">
+          <p>wip</p>
+        </div>
+        <div id="ho2" class="ho">
+          <img src="" class="himg">
+          <p>wip</p>
+        </div>
+        <div id="ho3" class="ho">
+          <img src="" class="himg">
+          <p>wip</p>
+        </div>
+      </div>
+    </div>
 
-    <h1 class="h">My Balls</h1>
-    <a href="bronya.html">(She is NOT underage) </a>
+<div class = "vertical"></div>
+
+    <h1 class="h">My Girlfriend (Real)</h1>
+    <a href="bronya.html">(She is not underage) </a>
 
     <p>a</p>
     <p>a</p>
@@ -85,4 +151,6 @@
     <p>a</p>
 
   </body>
+
+  <script src="script.js"></script>
 </html>
