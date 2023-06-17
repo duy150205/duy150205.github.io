@@ -3,7 +3,7 @@ body{
     height: 10vw;
 }
 
-.vertical {
+.between-section {
     text-align: center;
     border-bottom: 3px solid #474747;
     padding-top: 10vh;
@@ -11,7 +11,7 @@ body{
     margin: auto;
 }
 
-.bottom-left {
+.header-image {
     position: absolute;
     bottom: 0;
     text-align: center;
@@ -192,18 +192,29 @@ header{
 
 .ho{
     height: 60vh;
-    width: 25vw;
+    width: 40vh;
     border-radius: 50px;
     background: #f7f7f7;
+    overflow: hidden;
+    
+}
+.hob{
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    padding-left: 2vh;
+    padding-right: 2vh;
 }
 #ho1{
     float: left;
-    margin-left: 5vw;
+    margin-left: 10vw;
 }
 #ho2{
     display: inline-block;
 }
 #ho3{
     float: right;
-    margin-right: 5vw;
+    margin-right: 10vw;
+}
+
+.himg{
+    height: 20vh;
 }
