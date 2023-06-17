@@ -1,4 +1,4 @@
-const text = document.getElementById("head")
+const text = document.getElementById("header-text")
 
 const animate = (element,position) => {
      element.style.transform = `translateX(${position/3}vw)`
