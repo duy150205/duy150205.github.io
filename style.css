@@ -1,0 +1,209 @@
+body{
+    overflow-x: hidden;
+    height: 10vw;
+}
+
+.vertical {
+    text-align: center;
+    border-bottom: 3px solid #474747;
+    padding-top: 10vh;
+    width: 10vw;
+    margin: auto;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    height: 70vh;
+    left: 30vw;
+}
+
+header{
+    position: relative;
+    margin:auto;
+    background: #b6b8ba;
+    padding-left: 3vw;
+    padding-top: 70vh;
+    padding-bottom: 1vw;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    font-size: 15vh;
+    color: white;
+}
+
+.h{
+    padding-top: 5vh;
+    text-align: center;
+    color: #474747;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+#a{
+    text-align: center;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    font-size: 3vh;
+}
+
+#block{
+    border-radius: 50px;
+    background: #f7f7f7;
+    margin: auto;
+    width: 70vw;
+    height: 60vh;
+    display: flex;
+    align-items: center
+}
+
+#info{
+    text-align: left;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    font-size: 3vh;
+    padding-left: 7vh;
+}
+
+#info2{
+    text-align: left;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    font-size: 3vh;
+    padding-left: 7vh;
+    padding-right: 7vh;
+}
+
+#im{
+    height: 40vh;
+    margin: auto;
+}
+
+.sidebar{
+    height: 60vh;
+    width:100%;
+}
+
+.but{
+    text-align:center;
+}
+
+#btn1 {
+    background:url(https://i.imgur.com/nDDjA7c.png) no-repeat;
+    background-size: cover;
+    height: 32vw;
+    width: 24vw;
+    border: none;
+    cursor: pointer;
+    transition: transform .2s;
+}
+#btn1:hover {
+    transform: scale(1.2);
+}
+
+
+#btn2 {
+    background:url(https://i.imgur.com/157yuqH.png) no-repeat;
+    background-size: cover;
+    height: 32vw;
+    width: 24vw;
+    border: none;
+    cursor: pointer;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    transition: transform .2s;
+}
+#btn2:hover {
+    transform: scale(1.2);
+}
+
+#btn3 {
+    background:url(https://i.imgur.com/E5sJDAZ.png) no-repeat;
+    background-size: cover;
+    height: 32vw;
+    width: 24vw;
+    border: none;
+    cursor: pointer;
+    transition: transform .2s;
+}
+#btn3:hover {
+    transform: scale(1.2);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.7);
+}
+.modal-content {
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    background-color: #fefefe;
+    margin: auto;
+    width: 50vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vw;
+    text-align: left;
+    vertical-align: middle;
+}
+
+@keyframes show{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes hide{
+    from{
+        opacity: 1;
+        transform: scale(1);
+    }
+    to{
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+
+.school-head{
+    font-size: 4vh;
+}
+.school-des{
+    font-size: 3vh;
+}
+.school-img{
+    width: 50vw;
+    padding-bottom: 3vh;
+    object-fit: contain;
+}
+
+#block2{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.ho{
+    height: 60vh;
+    width: 25vw;
+    border-radius: 50px;
+    background: #f7f7f7;
+}
+#ho1{
+    float: left;
+    margin-left: 5vw;
+}
+#ho2{
+    display: inline-block;
+}
+#ho3{
+    float: right;
+    margin-right: 5vw;
+}
