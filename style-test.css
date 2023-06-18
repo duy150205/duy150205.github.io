@@ -176,7 +176,17 @@ header{
     width: 60vw;
     text-align: left;
     vertical-align: middle;
+    animation: popup 0.5s;
 }
+
+@keyframes popup {
+    from {
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+  }
 
 .edu-school-head{
     font-size: 4vh;
