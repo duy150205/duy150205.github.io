@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif; 
+}
+
+header{
+    display: flex;
+    align-items: end;
+    position: relative;
+    background: #b6b8ba;
+    height: 100vh;
+    width: 100%;
+    color: white;
+}
+
+.header-image{
+    display: block;
+    height: 90vh;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.header-copyright{
+    font-size: 5vh;
+    position: absolute;
+    top: 5vh;
+    left: 5vh;
+}
+
+.header-text{
+    font-size: 25vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.marquee {
+    --gap: 1rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+}
+  
+.marquee-content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll 20s linear infinite;
+}
+  
+@keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+  
+@media (prefers-reduced-motion: reduce) {
+    .marquee__content {
+      animation-play-state: paused !important;
+    }
+}
+
+.between-section {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-bottom: 3px solid #474747;
+    padding-top: 10vh;
+    width: 10vw;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-header{
+    font-size: 5vh;
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+    text-align: center;
+    color: #474747;
+}
+
+.intro-text{
+    text-align: center;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    font-size: 3vh;
+}
+
+.intro-text-no-transition{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.4s ease-out;
+}
+
+.intro-text-transition {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bio{
+    border-radius: 50px;
+    background: #f7f7f7;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bio-text-column{
+    font-size: 3vh;
+    float: left;
+    padding-left: 5vw;
+    white-space: nowrap;
+}
+
+.bio-image{
+    height: 30vh;
+    float: left;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.edu{
+    display: flex;
+    justify-content: center;
+}
+
+.edu-button{
+    height: 60vh;
+    width: 45vh;
+    border: none;
+    cursor: pointer;
+    transition: transform .2s;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+.edu-button:hover {
+    transform: scale(1.2);
+}
+
+#edu-button1 {
+    background:url(https://i.imgur.com/nDDjA7c.png) no-repeat;
+    background-size: cover;
+}
+
+#edu-button2 {
+    background:url(https://i.imgur.com/157yuqH.png) no-repeat;
+    background-size: cover;
+}
+
+#edu-button3 {
+    background:url(https://i.imgur.com/E5sJDAZ.png) no-repeat;
+    background-size: cover;
+}
+
+.edu-pop-tab {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.7);
+}
+
+.edu-pop-tab-content {
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    background-color: #fefefe;
+    margin: auto;
+    width: 60vw;
+    text-align: left;
+    vertical-align: middle;
+    animation: popup 0.5s;
+}
+
+@keyframes popup {
+    from {
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+  }
+
+.edu-school-head{
+    font-size: 4vh;
+    padding-top: 3vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.edu-school-text{
+    font-size: 3vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.edu-school-img{
+    width: 60vw;
+    padding-bottom: 3vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    object-fit: contain;
+}
+
+.hob{
+    display: flex;
+    justify-content: center;
+}
+
+.hob-tab{
+    width: 40vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    overflow: hidden;
+    border-radius: 50px;
+    background: #f7f7f7;
+}
+
+.hob-text{
+    font-size: 2vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-bottom: 3vh;
+    text-align: center;
+}
+
+.hob-image{
+    height: 20vh;
+}
