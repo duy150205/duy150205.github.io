@@ -471,12 +471,6 @@ span {
     --primary-color: #000;
   }
   
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
   .container1 {
     position: absolute;
     left: 0;
