@@ -477,6 +477,51 @@ span:nth-of-type(3) {
     }
 }
 
-  
+}
+
+.weeb{
+    text-align: center;
+}
+
+.hi3-tab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hsr-tab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+}
+
+.h-img{
+    height: 5vh;
+    margin-right: 2vh;
+}
+
+.h-text{
+    font-size: 3vh;
+}
+
+.h-profile-img{
+    height: 60vh;
+}
+
+.hi3-br-text{
+    font-size: 3vh;
+}
+
+.hi3-br-img{
+    height: 20vh;
+    margin-bottom: 2vh;
+}
+
+.hsr-rail-img{
+    width: 25%;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    margin-bottom: 2vh;
 }
 
