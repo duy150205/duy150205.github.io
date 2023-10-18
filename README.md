@@ -4,8 +4,9 @@
   </tr>
 </table>
 
-## About The Project
+## About This Project
 A website made from raw lines of HTML/CSS/JS, no frameworks used. <br>
+Started learning from scratch to completing the website in roughly a week.
 
 ## Contact
 
