@@ -5,11 +5,7 @@
 </table>
 
 ## About This Project
-A website made from raw lines of HTML/CSS/JS, no frameworks used. <br>
-Started learning from scratch to completing the website in roughly a week.
-
-## UPDATED
-NOW USING FRAMEWORKS!
+A website created when I started learning from scratch.
 
 ## Contact
 
