@@ -1,8 +1,8 @@
+
+
 window.onbeforeunload = function () {
 	window.scrollTo(0, 0);
 }
-
-
 
 
 // I hope this over-commenting helps. Let's do this!
@@ -447,15 +447,16 @@ waitForImages();
 let xPos = 0;
 
 const hob_list = [
-	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088864/1_copy_so0sas.png',
-	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088861/2_copy_pdwzjv.png',
-	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088859/3_copy_burje0.png',
-	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088857/4_copy_aq7ohu.png',
-	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088855/5_copy_kbwdri.png',
-	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088853/6_copy_hbvalb.png',
+	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698183144/10_copy_omte6f.png',
 	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088828/7_copy_xyitt8.png',
 	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088825/8_copy_zkz75c.png',
-	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088825/9_copy_l5xabg.png'
+	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088861/2_copy_pdwzjv.png',
+	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088859/3_copy_burje0.png',
+	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088864/1_copy_so0sas.png',
+	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088853/6_copy_hbvalb.png',
+	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088825/9_copy_l5xabg.png',
+	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088857/4_copy_aq7ohu.png',
+	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088855/5_copy_kbwdri.png'
 ];
 
 gsap.timeline()
