@@ -1,28 +1,30 @@
+$('.loadingbar').delay(1500).animate({ left: '0' }, 3000);
+$('.loadingBox').delay(500).animate({ opacity: '1' }, 1000);
+$('.splashScreen').delay(4500).animate({ top: '-100%' }, 1500);
+$('.loadingCircle').delay(4500).animate({ opacity: '0' }, 500);
+$('body').delay(5000).queue(function () {
+	$('body').addClass("visibleSplash");
+});
 
 
-window.onbeforeunload = function () {
-	window.scrollTo(0, 0);
-}
+
+const parallax = document.getElementById("parallax");
+
+window.addEventListener("scroll", function () {
+	let offset = window.pageYOffset;
+	parallax.style.backgroundPositionY = offset * -0.7 + "px";
+});
 
 
-// I hope this over-commenting helps. Let's do this!
-// Let's use the 'active' variable to let us know when we're using it
+
 let active = false;
-// and define our dom elements to make it easier to read
 let scrollerMiddle = document.querySelector('.scroller-middle');
 let scrollerTop = document.querySelector('.scroller-top');
 
-
-// First we'll have to set up our event listeners
-// We want to watch for clicks on our scroller
 scrollerMiddle.addEventListener('mousedown', function () {
 	active = "middle";
-	// Add our scrolling class so the scroller has full opacity while active
 	scrollerMiddle.classList.add('scrolling');
 });
-// We also want to watch the body for changes to the state,
-// like moving around and releasing the click
-// so let's set up our event listeners
 document.body.addEventListener('mouseup', function () {
 	active = false;
 	scrollerMiddle.classList.remove('scrolling');
@@ -31,7 +33,6 @@ document.body.addEventListener('mouseleave', function () {
 	active = false;
 	scrollerMiddle.classList.remove('scrolling');
 });
-// We'll have to do the same for our top scroller
 scrollerTop.addEventListener('mousedown', function () {
 	active = "top";
 	scrollerTop.classList.add('scrolling');
@@ -45,58 +46,42 @@ document.body.addEventListener('mouseleave', function () {
 	scrollerTop.classList.remove('scrolling');
 });
 
-// Let's figure out where their mouse is at
 document.body.addEventListener('mousemove', function (e) {
 	if (!active) return;
-	// Their mouse is here...
 	let x = e.pageX;
-	// but we want it relative to our wrapper
 	x -= document.querySelector('.wrapper').getBoundingClientRect().left;
-	// Okay let's change our state
 	scrollIt(x);
 });
 
-// Let's use this function
+const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 function scrollIt(x) {
-	// Calculate our transform
 	let transform = Math.max(0, (Math.min(x, document.querySelector('.wrapper').offsetWidth)));
-	// we show all our bottom image but how much of our middle and top,
-	// that'll depend on what we're dragging
-	// if we're dragging the middle slider
 	if (active === "middle") {
 		document.querySelector('.middle').style.width = transform + "px";
-		scrollerMiddle.style.left = transform - 25 + "px";
-		// if we're using scroller-middle, middle must always be to the right of top
-		if (scrollerTop.getBoundingClientRect().left > scrollerMiddle.getBoundingClientRect().left - 5) {
-			document.querySelector('.top').style.width = transform - 5 + "px";
-			scrollerTop.style.left = transform - 30 + "px";
+		scrollerMiddle.style.left = transform - 0.025 * vh + "px";
+		if (scrollerTop.getBoundingClientRect().left > scrollerMiddle.getBoundingClientRect().left) {
+			document.querySelector('.top').style.width = transform + "px";
+			scrollerTop.style.left = transform - 0.025 * vh + "px";
 		}
 	}
-	// if we're dragging the top slider
 	if (active === "top") {
 		document.querySelector('.top').style.width = transform + "px";
-		scrollerTop.style.left = transform - 25 + "px";
-		// if we're using scroller-top, top must always be to the left
-		if (scrollerTop.getBoundingClientRect().left > scrollerMiddle.getBoundingClientRect().left - 5) {
-			document.querySelector('.middle').style.width = transform + 5 + "px";
-			scrollerMiddle.style.left = transform - 20 + "px";
+		scrollerTop.style.left = transform - 0.025 * vh + "px";
+		if (scrollerTop.getBoundingClientRect().left > scrollerMiddle.getBoundingClientRect().left) {
+			document.querySelector('.middle').style.width = transform + "px";
+			scrollerMiddle.style.left = transform - 0.025 * vh + "px";
 		}
 	}
 }
 
-// Let's set our opening state based off the width, 
-// we want to show a bit of both images so the user can see what's going on
-const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 active = "middle";
-scrollIt(vw / 2.9 * 2);
+scrollIt(0.16 * vh);
 active = "top";
-scrollIt(vw - vw / 2.9 * 2);
+scrollIt(0.08 * vh);
 active = false;
 
 
-// And finally let's repeat the process for touch events
-// first our middle scroller...
 scrollerMiddle.addEventListener('touchstart', function () {
 	active = "middle";
 	scrollerMiddle.classList.add('scrolling');
@@ -110,7 +95,6 @@ document.body.addEventListener('touchcancel', function () {
 	scrollerMiddle.classList.remove('scrolling');
 });
 
-// then scroller top, our second scroller
 scrollerTop.addEventListener('touchstart', function () {
 	active = "top";
 	scrollerTop.classList.add('scrolling');
@@ -207,7 +191,6 @@ const buttons = {
 	next: document.querySelector(".btn--right"),
 };
 const cardsContainerEl = document.querySelector(".cards__wrapper");
-const appBgContainerEl = document.querySelector(".app__bg");
 
 const cardInfosContainerEl = document.querySelector(".info__wrapper");
 
@@ -220,10 +203,6 @@ function swapCards(direction) {
 	const previousCardEl = cardsContainerEl.querySelector(".previous--card");
 	const nextCardEl = cardsContainerEl.querySelector(".next--card");
 
-	const currentBgImageEl = appBgContainerEl.querySelector(".current--image");
-	const previousBgImageEl = appBgContainerEl.querySelector(".previous--image");
-	const nextBgImageEl = appBgContainerEl.querySelector(".next--image");
-
 	changeInfo(direction);
 	swapCardsClass();
 
@@ -234,39 +213,27 @@ function swapCards(direction) {
 		previousCardEl.classList.remove("previous--card");
 		nextCardEl.classList.remove("next--card");
 
-		currentBgImageEl.classList.remove("current--image");
-		previousBgImageEl.classList.remove("previous--image");
-		nextBgImageEl.classList.remove("next--image");
 
 		currentCardEl.style.zIndex = "50";
-		currentBgImageEl.style.zIndex = "-2";
 
 		if (direction === "right") {
 			previousCardEl.style.zIndex = "20";
 			nextCardEl.style.zIndex = "30";
 
-			nextBgImageEl.style.zIndex = "-1";
 
 			currentCardEl.classList.add("previous--card");
 			previousCardEl.classList.add("next--card");
 			nextCardEl.classList.add("current--card");
 
-			currentBgImageEl.classList.add("previous--image");
-			previousBgImageEl.classList.add("next--image");
-			nextBgImageEl.classList.add("current--image");
 		} else if (direction === "left") {
 			previousCardEl.style.zIndex = "30";
 			nextCardEl.style.zIndex = "20";
 
-			previousBgImageEl.style.zIndex = "-1";
 
 			currentCardEl.classList.add("next--card");
 			previousCardEl.classList.add("current--card");
 			nextCardEl.classList.add("previous--card");
 
-			currentBgImageEl.classList.add("next--image");
-			previousBgImageEl.classList.add("current--image");
-			nextBgImageEl.classList.add("previous--image");
 		}
 	}
 }
@@ -447,23 +414,26 @@ waitForImages();
 let xPos = 0;
 
 const hob_list = [
-	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698183144/10_copy_omte6f.png',
-	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088828/7_copy_xyitt8.png',
 	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088825/8_copy_zkz75c.png',
 	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088861/2_copy_pdwzjv.png',
 	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088859/3_copy_burje0.png',
 	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088864/1_copy_so0sas.png',
-	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088853/6_copy_hbvalb.png',
 	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088825/9_copy_l5xabg.png',
+	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088853/6_copy_hbvalb.png',
 	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088857/4_copy_aq7ohu.png',
 	'https://res.cloudinary.com/dy8o8zipa/image/upload/v1698088855/5_copy_kbwdri.png'
 ];
 
+gsap.set('.container4', {
+	width: 0.35 * vh + 'px',
+	height: 0.5 * vh + 'px',
+	perspective: 1.5 * vh + 'px'
+})
 gsap.timeline()
-	.set('.ring', { rotationY: 180, cursor: 'grab' }) //set initial rotationY so the parallax jump happens off screen
-	.set('.img', { // apply transform rotations to each image
-		rotateY: (i) => i * -36,
-		transformOrigin: '50% 50% 500px',
+	.set('.ring', { rotationY: 180, cursor: 'grab' })
+	.set('.img', {
+		rotateY: (i) => i * -45,
+		transformOrigin: '50% 50%' + 0.5 * vh + 'px',
 		z: -500,
 		backgroundImage: (i) => 'url(' + hob_list[i] + ')',
 		backgroundPosition: (i) => getBgPos(i),
@@ -516,6 +486,6 @@ function dragEnd(e) {
 }
 
 
-function getBgPos(i) { //returns the background-position string to create parallax movement in each image
-	return (100 - gsap.utils.wrap(0, 360, gsap.getProperty('.ring', 'rotationY') - 180 - i * 36) / 360 * 500) + 'px 0px';
+function getBgPos(i) {
+	return (0.05 * vh - gsap.utils.wrap(0, 360, gsap.getProperty('.ring', 'rotationY') - 180 - i * 45) / 360 * 0.5 * vh) + 'px 0px';
 }
