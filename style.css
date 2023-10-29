@@ -233,7 +233,8 @@
   .bac {
     position: absolute;
     background: url("https://res.cloudinary.com/dy8o8zipa/image/upload/v1698499181/bac_trpj9b.png");
-    background-position: center;
+    background-position-x: center;
+    background-position-y: botom;
     background-repeat: no-repeat;
     background-size: 384vh 108vh;
     width: 100vw;
