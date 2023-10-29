@@ -45,7 +45,7 @@
   }
 
   .loadingContainer {
-    width: 400px;
+    width: 40vh;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -62,30 +62,30 @@
 
   .splashLogo {
     width: 50%;
-    margin: 0 0 50px;
+    margin: 0 0 5vh;
   }
 
   .loadingBarContainer {
     width: 100%;
     background: #eee;
-    height: 10px;
+    height: 1vh;
     display: block;
-    margin: 50px 0 0;
+    margin: 5vh 0 0;
     overflow: hidden;
   }
 
   .loadingbar {
     width: 100%;
-    height: 10px;
+    height: 1vh;
     background: #000;
     position: absolute;
     left: -100%;
   }
 
   .loadingCircle {
-    width: 75px;
-    height: 75px;
-    margin: 30px auto 0;
+    width: 7.5vh;
+    height: 7.5vh;
+    margin: 3vh auto 0;
     background: #fff;
     display: block;
     border-radius: 50%;
@@ -94,8 +94,8 @@
   }
 
   .circleOuter {
-    width: 60px;
-    height: 60px;
+    width: 6vh;
+    height: 6vh;
     background: #fff;
     border-radius: 50%;
     position: absolute;
@@ -106,8 +106,8 @@
   }
 
   .circleLoader {
-    width: 75px;
-    height: 75px;
+    width: 7.5vh;
+    height: 7.5vh;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(125, 185, 232, 0) 100%);
     position: absolute;
     right: 50%;
@@ -134,7 +134,7 @@
   }
 
   .child {
-    scroll-snap-align: center;
+    scroll-snap-align: start;
     height: 100vh;
   }
 
@@ -197,6 +197,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    text-transform: uppercase;
   }
 
 
@@ -253,8 +254,8 @@
 
   .wrapper1 .left {
     width: 70%;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 0.5vh;
+    border-bottom-left-radius: 0.5vh;
     box-shadow: inherit;
   }
 
@@ -263,8 +264,8 @@
   .wrapper1 .right {
     width: 50%;
     background: #fff;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 0.5vh;
+    border-bottom-right-radius: 0.5vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -278,11 +279,11 @@
   .wrapper1 .right .info1 .i-t {
     margin-bottom: 2vh;
     padding-bottom: 1vh;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 0.1vh solid #e0e0e0;
     color: #353c4e;
     text-transform: uppercase;
     font-size: 4vh;
-    letter-spacing: 5px;
+    letter-spacing: 0.5vh;
   }
 
   .wrapper1 .right .info_data {
@@ -307,8 +308,8 @@
   }
 
   .wrapper {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 0.5vh;
+    border-bottom-left-radius: 0.5vh;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -318,8 +319,8 @@
 
 
   .head_img {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 0.5vh;
+    border-bottom-left-radius: 0.5vh;
     height: 100%;
     width: 70vh;
     object-fit: cover;
@@ -463,21 +464,15 @@
   }
 
   .end {
-    padding-top: 8px;
     -webkit-user-select: none;
-    /* Safari */
     -moz-user-select: none;
-    /* Firefox */
     -ms-user-select: none;
-    /* IE10+/Edge */
     user-select: none;
-    /* Standard */
   }
 
   .end-wrapper {
     position: relative;
-    box-shadow: 0 0 8px 8px #f6f6f6;
-    background: #f6f6f6;
+    background: #f4f4f4;
     height: 100vh;
     width: 100%;
     color: black;
@@ -487,7 +482,7 @@
     display: inline-block;
     font-size: 8vh;
     position: absolute;
-    top: 5vh;
+    top: 6vh;
     left: 50%;
     transform: translate(-50%, 0);
   }
@@ -509,10 +504,10 @@
 
   .end-copyright {
     text-align: center;
-    border-top: 3px solid black;
+    border-top: 0.02vh solid black;
     padding-top: 5vh;
-    width: 80%;
-    font-size: 3vh;
+    width: 100%;
+    font-size: 2vh;
     position: absolute;
     bottom: 5vh;
     left: 50%;
@@ -539,7 +534,7 @@
   }
 
   .title {
-    font-size: 81px;
+    font-size: 8vh;
     color: #fff;
     text-align: center;
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic,
@@ -547,7 +542,7 @@
     animation: wave 0.4s, jump 3s;
     position: relative;
     top: 0;
-    padding: 4px;
+    padding: 0.4vh;
     opacity: 0;
     z-index: 3;
     animation-fill-mode: forwards;
@@ -628,10 +623,10 @@
   font-size: 2vh;
   transition: color 0.5s, transform 0.2s, background-color 0.2s;
   outline: none;
-  border-radius: 3px;
-  margin: 0 10px;
-  padding: 23px 33px;
-  border: 3px solid transparent;
+  border-radius: 0.3vh;
+  margin: 0 1vh;
+  padding: 2vh 3vh;
+  border: 0.3vh solid transparent;
 }
 
 .btn-wrap {
@@ -642,7 +637,7 @@
 .bt1 {
   background-color: transparent;
   color: white;
-  border: 2px solid white;
+  border: 0.2vh solid white;
 }
 
 .bt1:hover {
@@ -653,7 +648,7 @@
 .bt2 {
   background-color: transparent;
   color: black;
-  border: 2px solid black;
+  border: 0.2vh solid black;
 }
 
 .bt2:hover {
@@ -726,7 +721,7 @@
 }
 
 .cardList__btn {
-  --btn-size: 35px;
+  --btn-size: 4vh;
   width: var(--btn-size);
   height: var(--btn-size);
   position: absolute;
@@ -757,7 +752,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  perspective: 1000px;
+  perspective: 100vh;
 }
 
 .card {
@@ -839,7 +834,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  perspective: 1000px;
+  perspective: 100vh;
   transform-style: preserve-3d;
 }
 
@@ -874,7 +869,7 @@
 }
 
 .info .location {
-  --mg-left: 40px;
+  --mg-left: 4vh;
   --text-size-offset: 0.12;
   font-weight: 600;
   margin-left: var(--mg-left);
@@ -893,14 +888,14 @@
 
 .info .location::before {
   top: 50%;
-  width: 20px;
-  height: 5px;
+  width: 2vh;
+  height: 0.5vh;
 }
 
 .info .location::after {
   bottom: 0;
-  width: 60px;
-  height: 2px;
+  width: 6vh;
+  height: 0.2vh;
 }
 
 .info .description {
