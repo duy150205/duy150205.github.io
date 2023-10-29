@@ -6,9 +6,14 @@ $('body').delay(5000).queue(function () {
 	$('body').addClass("visibleSplash");
 });
 
+const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 
+const parallax = document.getElementById("parallax");
 
-
+window.addEventListener("scroll", function () {
+	let offset = window.pageYOffset;
+	parallax.style.backgroundPositionY = (-0.6 * vh + offset * -0.1) + "px";
+});
 
 
 
@@ -48,7 +53,6 @@ document.body.addEventListener('mousemove', function (e) {
 	scrollIt(x);
 });
 
-const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 function scrollIt(x) {
 	let transform = Math.max(0, (Math.min(x, document.querySelector('.wrapper').offsetWidth)));
 	if (active === "middle") {
@@ -422,14 +426,14 @@ const hob_list = [
 gsap.set('.container4', {
 	width: 0.35 * vh + 'px',
 	height: 0.5 * vh + 'px',
-	perspective: 1.5 * vh + 'px'
+	perspective: 2 * vh + 'px'
 })
 gsap.timeline()
 	.set('.ring', { rotationY: 180, cursor: 'grab' })
 	.set('.img', {
 		rotateY: (i) => i * -45,
 		transformOrigin: '50% 50%' + 0.5 * vh + 'px',
-		z: -500,
+		z: -0.5 * vh,
 		backgroundImage: (i) => 'url(' + hob_list[i] + ')',
 		backgroundPosition: (i) => getBgPos(i),
 		backfaceVisibility: 'hidden'
