@@ -4,8 +4,8 @@
   </tr>
 </table>
 
-## About This Project
-A website created when I started learning from scratch.
+## About This Website
+A small project I worked on during high school
 
 ## Contact
 
