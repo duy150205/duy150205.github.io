@@ -24,14 +24,15 @@
     display: block;
   }
 
-
-  body {
-    overflow: hidden;
+  :root::-webkit-scrollbar {
+    display: none;
   }
 
-  body.visibleSplash {
-    overflow: visible !important;
+  :root {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
+
 
   .splashScreen {
     z-index: 99999;
@@ -128,7 +129,6 @@
   }
 
 
-  .body,
   html {
     scroll-snap-type: y mandatory;
   }
@@ -136,16 +136,6 @@
   .child {
     scroll-snap-align: start;
     height: 100vh;
-  }
-
-  body::-webkit-scrollbar {
-    display: none;
-  }
-
-  body {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    margin: 0;
   }
 
 
@@ -175,13 +165,13 @@
     height: 10vh;
     position: absolute;
     left: 30vh;
-    top: 0;
+    top: 1vh;
   }
 
   .page-img {
     height: 80vh;
     width: calc(100vw - 20vh);
-    background: url("https://res.cloudinary.com/dy8o8zipa/image/upload/v1698501940/Welcome_d6fcng.png");
+    background: url("https://res.cloudinary.com/dy8o8zipa/image/upload/v1704987892/Welcome_pwy0in.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -869,7 +859,6 @@
 }
 
 .info .location {
-  --mg-left: 4vh;
   --text-size-offset: 0.12;
   font-weight: 600;
   margin-left: var(--mg-left);
@@ -879,7 +868,6 @@
 
 .info .location::before,
 .info .location::after {
-  content: "";
   position: absolute;
   background: #fff;
   left: 0%;
